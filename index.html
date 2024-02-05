@@ -24,6 +24,68 @@
 				<li><a href="#">Contact</a></li>
 			</ul>
 		</nav>
+<style>
+	form{
+  display: block;
+  width: 500px;
+  padding: 1em;
+  margin: auto;
+  colort: #222;
+  font-size: 1.1em;
+}
+
+input, label, fieldset{
+ display: block;
+ width: 95%;
+}
+
+.required{
+  display: inline-block;
+  color: #DE0B63;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+label{
+  padding-left: 0.2em;
+  margin: 0.75em 0 0.25em 0; 
+}
+
+input{
+  font-size: 1em;
+  padding: 0.25em 0.5em;
+  border: 1px sold #222;
+  height: 1.5em;
+}
+
+fieldset{
+  border: 1px sold #222;
+  padding: 0.5m 0 1em 0.5em;
+  margin: 0.75em 0 0.25em 0;
+  width: 98%;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr 3fr;
+}
+
+textarea{
+  width: 100%;
+  height: 5em;
+  margin-bottom: 1em;
+}
+
+input:focus, textarea:focus{
+  border-color: blue;
+  box-shadow: 0 0 0 3px rgba(34, 34, 34, 0.3);
+  border-radius: 4px;
+}
+
+input:error, textarea:error{
+  border-color: #DE0B63;
+
+
+	</style>
+
+		
 	</header>
 	<div id="particleBackground"></div>
 	<main id="main-content">
@@ -33,9 +95,10 @@
 
 <!-- 	-------- TO-DO: ADD FORM CODE HERE DURING CLASS, FOLLOW ALONG TO COMPLETE -------- -->
 <form action="https://wp.zybooks.com/form-viewer.php" method="POST">
+	
 	<label for="fullname">Full Name (First and Last):</label>
 	<input type="text" id="fullname" name="fullname" required>
-
+	
 	<label for="email">Email Address:</label>
 	<input type="email" id="email" name="email" required>
 
@@ -43,13 +106,13 @@
 	<input type="tel" id="phone" name="phone" required>
 
 	<fieldset>
-		<legend>Preferred Method of Contact:</legend>
-		<label for="contact-email">
-			<input type="radio" id="contact-email" name="contact_method" value="email" required>Email
-		</label>
-		<label for="contact-phone">
-			<input type="radio" id="contact-phone" name="contact_method" value="phone">Phone
-		</label>
+		<legend>Preferred Method of Contact:</legend><br>
+		<span>
+            <input type="radio" name="contact_method" value="email" required>Email
+        </span><br>
+        <span>
+            <input type="radio" name="contact_method" value="phone" required>Phone
+        </span><br>
 	</fieldset>
 
 	<label for="state">State of Residence:</label>
@@ -105,7 +168,6 @@
 		<option value="WV">West Virginia</option>
 		<option value="WI">Wisconsin</option>
 		<option value="WY">Wyoming</option>
-		<!-- Add more states as needed -->
 	</select>
 
 	<label for="comments">Comments:</label>

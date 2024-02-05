@@ -183,7 +183,7 @@ form{
 }
 
 input, label, textarea{
-	display: block;
+	display: inline-block;
 	width: calc(100% - 2em);
 }
 
@@ -256,6 +256,7 @@ textarea{
 }
 
 input[type="radio"]{
+	display:inline-block;
 	margin-top: 0.4em;
 	outline: none;
 	border: 1px solid #222;
